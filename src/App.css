@@ -1,42 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
 #root {
+  width: 100vw;
+  height: 100vh;
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 0;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container {
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button {
+  white-space: nowrap;
+  width: 4em;
+  margin-left: 1em;
 }
 
-.card {
-  padding: 2em;
+/* Header */
+header {
+  padding-bottom: 2rem;
 }
 
-.read-the-docs {
-  color: #888;
+header h1 {
+  padding-bottom: 1rem;
+}
+
+header .profile {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* TodoInput */
+.todo-insert {
+  padding-bottom: 1rem;
+}
+
+.insert-btn {
+  background-color: rgb(21, 129, 21);
+}
+
+/* TodoList, Todo */
+.todoList {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.todoList > li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.todoList > li span,
+.todoList > li .todo-update {
+  width: 100%;
+  margin-left: 1rem;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.update-btn {
+  background-color: #19389d;
+}
+
+.delete-btn {
+  background-color: #ac2323;
+}
+
+.completed {
+  text-decoration: line-through;
 }
